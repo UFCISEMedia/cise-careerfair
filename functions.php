@@ -1,6 +1,6 @@
 <?php
 /**
- * UF HWCOE Child theme example functions and definitions.
+ * UF HWCOE Child theme functions and definitions.
 *
 */
 
