@@ -21,3 +21,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	line-height: 28px;
 	margin-bottom: 15px;
 }
+
+/*Styles for Homepage Companies listing*/
+.wp-show-posts-entry-summary p {
+	text-align: center;
+}
