@@ -10,6 +10,11 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
+/*Styles for Homepage content with image*/
+.content-with-image h2{
+	text-align: center;
+}
+
 /*Styles for Homepage secondary breaker*/
 .breaker {
 	background-color: #00529b;
@@ -25,4 +30,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 /*Styles for Homepage Companies listing*/
 .wp-show-posts-entry-summary p {
 	text-align: center;
+}
+
+/* Company Single Post Page*/
+.company-name h1 {
+	font-size: 40px;
+	margin: 60px 0 20px;
+	line-height: 43px;
 }

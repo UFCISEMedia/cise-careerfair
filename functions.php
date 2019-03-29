@@ -37,3 +37,8 @@ if ( !function_exists( 'hwcoe_ufl_child_icon_url' ) ) {
 	}
 	add_filter( 'get_site_icon_url', 'hwcoe_ufl_child_icon_url' );
 }
+
+/*
+ * Theme variable definitions
+ */
+define( "HWCOE_UFL_CHILD_INC_DIR", get_stylesheet_directory() . "/inc/modules" );
