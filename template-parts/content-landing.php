@@ -61,6 +61,15 @@
 				<?php endif // secondary_module ?>
 				<?php
 				  /*
+				   * Image Callout
+				   * Three image callout
+				   */
+				  ?>
+				<?php if( get_row_layout() == 'short_timeline_display' ): ?>
+					<?php include( HWCOE_UFL_CHILD_INC_DIR . '/ufl-cf-timeline.php' ); ?>
+				<?php endif // secondary_module ?>
+				<?php
+				  /*
 				   * Content Block with Quote 
 				   */
 				  ?>
