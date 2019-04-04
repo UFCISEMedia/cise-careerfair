@@ -10,6 +10,11 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
+/*Header Styles*/
+.header.unit {
+	border-bottom: 1px solid #ccc;
+}
+
 /*Styles for Homepage content with image*/
 .content-with-image h2{
 	text-align: center;
@@ -44,6 +49,27 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	background-color: #00529b;
 	padding: 70px 0;
 	margin-bottom: 50px;
+	position: relative;
+}
+
+.timeline-display-wrapper:before, .timeline-display-wrapper:after {
+	background-image: url("img/edge-bottom.png");
+	background-position: top center;
+	bottom: 0;
+	content: '';
+	display: block;
+	height: 40px;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	z-index: 5;
+}
+
+.timeline-display-wrapper:after {
+	background-image: url("img/edge-top.png");
+	background-position: bottom center;
+	bottom: auto;
+	top: 0;
 }
 
 .timeline-line {
