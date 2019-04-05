@@ -119,6 +119,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 .timeline-box p {
 	font-size:18px;
 	line-height:28px;
+	margin: 0;
 }
 
 @media (min-width: 992px){
