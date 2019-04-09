@@ -122,6 +122,36 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	margin: 0;
 }
 
+.double-content h2 {
+	text-align: center;
+}
+
+/*Slideshow Gallery Style Changes*/
+.bwg_container { 
+	margin: 0 !important;
+}
+
+#bwg_container1_0 #bwg_container2_0 .bwg_slideshow_dots_0 {
+	background: #E47426 !important;
+}
+
+#bwg_container1_0 #bwg_container2_0 .bwg_slideshow_dots_active_0 {
+	background: #FFFFFF !important;
+	border: 1px solid #FFFFFF !important;
+}
+
+#bwg_container1_0 #bwg_container2_0 #spider_slideshow_left-ico_0, #bwg_container1_0 #bwg_container2_0 #spider_slideshow_right-ico_0 {
+	background-color: #00529b !important;
+}
+
+#bwg_container1_0 #bwg_container2_0 .bwg_slideshow_image_wrap_0 {
+	background-color: rgba(0,0,0,0) !important;
+}
+
+#bwg_container1_0 #bwg_container2_0 .bwg_slideshow_dots_container_0 {
+	bottom: -30px !important;
+}
+
 @media (min-width: 992px){
 	.timeline-display-wrapper {
 		margin-bottom:100px;
@@ -138,6 +168,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	}
 	.timeline-box h3 {
 		font-size: 41px !important;
+	}
+}
+
+@media (max-width: 767px){
+	.bwg_container { 
+		margin-bottom: 50px !important;
 	}
 }
 
