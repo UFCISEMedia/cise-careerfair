@@ -74,3 +74,18 @@ function my_mce_before_init_insert_formats( $init_array ) {
 } 
 // Attach callback to 'tiny_mce_before_init' 
 add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' );  
+
+function create_post_type() {
+  register_post_type( 'cf-event_information',
+    array(
+      'labels' => array(
+        'name' => __( 'Event Information' ),
+        'singular_name' => __( 'Event Information' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+    )
+  );
+}
+add_action( 'init', 'create_post_type' );
+
