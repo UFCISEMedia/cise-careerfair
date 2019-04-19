@@ -10,15 +10,46 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
+h2 {
+	font-size: 42px;
+	text-align: center;
+	margin-bottom: 20px;
+	line-height: 40px;
+}
+
 /*Header Styles*/
 .header.unit {
 	border-bottom: 1px solid #ccc;
 }
 
-/*Styles for Homepage content with image*/
+.cf-single-button {
+	display: flex;
+	justify-content: center;
+	background-color: #00529b;
+	width: 250px;
+	margin: 0 auto 20px;
+	padding: 5px;
+}
+
+.cf-single-button a {
+	color: #fff;
+	margin: 0;
+	text-decoration: none;
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 36px;
+	text-transform: uppercase;
+	font-family: inherit;
+}
+
+.cf-single-button a:hover {
+	text-decoration: underline;
+}
+
+/*Styles for Homepage content with image
 .content-with-image h2{
 	text-align: center;
-}
+}*/
 
 /*Styles for Homepage secondary breaker*/
 .breaker {
@@ -44,7 +75,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	line-height: 43px;
 }
 
-/*Styles for Student Page*/
+/*Timeline Display*/
 .timeline-display-wrapper {
 	background-color: #00529b;
 	padding: 70px 0;
@@ -72,6 +103,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	top: 0;
 }
 
+.timeline-display-wrapper h2 {
+	color: #fff;
+}
+
 .timeline-line {
 	position: relative;
 }
@@ -97,8 +132,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	height: auto;
 	width: 300px;
 	background-color: #fff;
-	padding:17px;
-	text-align:center;
+	padding: 17px;
+	text-align: center;
 	line-height: 28px;
 	display: flex;
 	flex-direction: column;
@@ -108,6 +143,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 .timeline-box h2 {
 	font-size:24px;
 	line-height:28px;
+	color: #3E7198;
 }
 
 .timeline-box h3 {
@@ -122,8 +158,59 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	margin: 0;
 }
 
-.double-content h2 {
+/* Tile Tab Content*/
+.double-content h2, .tile-tab-content h2 {
 	text-align: center;
+}
+
+.tile-tab-wrap {
+	display: flex;
+	justify-content: flex-start;
+	position: relative;
+}
+
+.tab-title, .tab-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.tab-title {
+	flex: 0 0 200px;
+	height: 200px;
+	text-align: center;
+	background-color: #00529b;
+}
+
+.tab-title h3 {
+	color: #fff;
+	font-size: 30px;
+	margin: 0;
+}
+
+.company-tiles {
+	margin-bottom: 100px;
+}
+
+.company-tiles hr {
+	display: none;
+}
+
+.company-tiles .tile-tab-wrap {
+	justify-content: center;
+	margin-bottom: 20px;
+}
+
+.company-tiles .tab-title, .company-tiles .tab-content {
+	flex: 0 0 350px;
+	height: 70px;
+	text-align: center;
+	border-bottom: 1px solid #00529b;
+}
+
+.tab-content h3 {
+	font-size: 30px;
+	margin: 0;
 }
 
 /*Slideshow Gallery Style Changes*/
@@ -152,6 +239,65 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	bottom: -30px !important;
 }
 
+/*Table Styles*/
+.sponsorship-levels-table h4 {
+	color: #fff;
+	margin: 0;
+	white-space: nowrap;
+}
+
+.sponsorship-levels-table td.column-2, .sponsorship-levels-table td.column-3 {
+	color: #008000;
+}
+
+.tablepress tfoot th {
+	font-weight: 400 !important;
+}
+
+/* Double Block Styles*/
+.double-block-wrap {
+	display: flex;
+	justify-content: center;
+}
+
+.single-block {
+	background-color: #00529b;
+	padding: 10px;
+	margin: 0 10px;
+}
+
+.single-block img {
+	max-width: 300px;
+}
+
+.single-block h2 {
+	color: #fff;
+	font-weight: 500;
+}
+.single-block a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.single-block a:hover {
+	text-decoration: underline;
+	text-decoration-color: #E47426;
+	transition: none;
+}
+
+/* Form Styles */
+.form-message-img {
+	width: 100%;
+	max-width: 400px;
+	margin: auto;
+}
+
+p.form-message {
+	text-align: center;
+	max-width: 500px;
+	margin: auto;
+}
+
 @media (min-width: 992px){
 	.timeline-display-wrapper {
 		margin-bottom:100px;
@@ -174,6 +320,49 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 @media (max-width: 767px){
 	.bwg_container { 
 		margin-bottom: 50px !important;
+	}
+}
+
+@media (max-width: 730px){
+	.tile-tab-wrap {
+		flex-direction: column;
+	}
+
+	.tab-title {
+		flex: 0 0 70px;
+		height: auto;
+		padding-top: 10px;
+		margin-bottom: 20px;
+	}
+	
+	.company-tiles .tile-tab-wrap {
+		flex-direction: row;
+	}
+	
+	.company-tiles .tab-title, .company-tiles .tab-content {
+		flex: 0 0 275px;
+	}
+	
+	.tab-title h3, .tab-content h3 {
+		font-size: 25px;
+	}
+}
+
+@media (max-width: 710px){
+	.double-block-wrap {
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.single-block {
+		max-width: 300px;
+		margin-bottom: 10px;
+	}
+}
+
+@media (max-width: 700px){
+	.sponsorship-levels-table h4 {
+		font-size: 20px;
 	}
 }
 
@@ -200,5 +389,23 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	}
 	.timeline-box br {
 		display: none;
+	}
+}
+
+@media (max-width: 580px){
+	.company-tiles .tile-tab-wrap {
+		flex-direction: column;
+	}
+	
+	.company-tiles .tab-title, .company-tiles .tab-content {
+		flex: 0 0 60px;
+	}
+	
+	.company-tiles .tab-title {
+		margin-bottom: 0;
+	}
+	
+	.company-tiles .tab-content {
+		margin-bottom: 10px;
 	}
 }
