@@ -61,13 +61,28 @@
 				<?php endif // triple_image_callout ?>
 				<?php
 				  /*
-				   * Image Callout
-				   * Three image callout
+				   * Short Timeline Display
 				   */
 				  ?>
 				<?php if( get_row_layout() == 'short_timeline_display' ): ?>
 					<?php include( HWCOE_UFL_CHILD_INC_DIR . '/ufl-cf-timeline.php' ); ?>
 				<?php endif // short_timeline_display ?>
+				<?php
+				  /*
+				   * Double Blocks
+				   */
+				  ?>
+				<?php if( get_row_layout() == 'double_blocks' ): ?>
+					<?php include( HWCOE_UFL_CHILD_INC_DIR . '/ufl-cf-double-blocks.php' ); ?>
+				<?php endif // double-blocks ?>
+				<?php
+				  /*
+				   * Tile Tabs Content
+				   */
+				  ?>
+				<?php if( get_row_layout() == 'tile_tabs_content' ): ?>
+					<?php include( HWCOE_UFL_CHILD_INC_DIR . '/ufl-tile-content.php' ); ?>
+				<?php endif // tile_tabs_content ?>
 				<?php
 				  /*
 				   * Content Block with Quote 
