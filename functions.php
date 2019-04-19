@@ -42,3 +42,35 @@ if ( !function_exists( 'hwcoe_ufl_child_icon_url' ) ) {
  * Theme variable definitions
  */
 define( "HWCOE_UFL_CHILD_INC_DIR", get_stylesheet_directory() . "/inc/modules" );
+
+/*
+* Visual Editor Styles
+*/
+
+function my_mce_buttons_2($buttons) {
+    array_unshift($buttons, 'styleselect');
+    return $buttons;
+}
+add_filter('mce_buttons_2', 'my_mce_buttons_2');
+
+// Callback function to filter the MCE settings
+function my_mce_before_init_insert_formats( $init_array ) {  
+	// Define the style_formats array
+	$style_formats = array(  
+		// Each array child is a format with it's own settings
+		array(  
+			'title' => 'Button',  
+			'block' => 'div',  
+			'classes' => 'cf-single-button',
+			'wrapper' => true,
+			
+		),  
+	);  
+	// Insert the array, JSON ENCODED, into 'style_formats'
+	$init_array['style_formats'] = json_encode( $style_formats );  
+	
+	return $init_array;  
+  
+} 
+// Attach callback to 'tiny_mce_before_init' 
+add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' );  
