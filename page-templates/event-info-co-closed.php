@@ -8,10 +8,6 @@
 ?>
      <?php while ( have_posts() ) : the_post(); ?>
 
-	  <?php 
-			if(get_field('company_registration_closes')){ //if the field is not empty
-				echo get_field('company_registration_closes'); //display it
-			} 
-		?>
-	
+		<?php esc_attr( the_field( 'company_registration_closes' ) ); ?>
+
     <?php endwhile; // End of the loop. ?>

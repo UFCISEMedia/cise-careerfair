@@ -8,10 +8,6 @@
 ?>
      <?php while ( have_posts() ) : the_post(); ?>
 
-	  <?php 
-			if(get_field('student_registration_opens')){ //if the field is not empty
-				echo get_field('student_registration_opens'); //display it
-			} 
-		?>
+		<?php esc_attr( the_field( 'student_registration_opens' ) ); ?>
 	
     <?php endwhile; // End of the loop. ?>

@@ -8,10 +8,6 @@
 ?>
      <?php while ( have_posts() ) : the_post(); ?>
 
-	  <?php 
-			if(get_field('company_marketing_deadline')){ //if the field is not empty
-				echo get_field('company_marketing_deadline'); //display it
-			} 
-		?>
+		<?php esc_attr( the_field( 'company_marketing_deadline' ) ); ?>
 	
     <?php endwhile; // End of the loop. ?>
