@@ -1,4 +1,7 @@
 <div class="timeline-display-wrapper">
+	<?php if(get_sub_field('section_headline')) { 
+		echo '<h2>' . get_sub_field( 'section_headline' ) . '</h2>';
+	}?>
 	<div class="container timeline-line">
 		<div class="timeline-wrap">
 		<?php if( have_rows( 'timeline_display' ) ): ?>
