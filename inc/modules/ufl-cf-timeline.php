@@ -1,4 +1,4 @@
-<div class="timeline-display-wrapper">
+<div class="timeline-display-wrapper <?php the_sub_field( 'class' ); ?>">
 	<?php if(get_sub_field('section_headline')) { 
 		echo '<h2>' . get_sub_field( 'section_headline' ) . '</h2>';
 	}?>

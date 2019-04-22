@@ -122,10 +122,18 @@ h2 {
 	transform: translateY(-50%);
 }
 
+.company-timeline .timeline-line:before {
+	display: none;
+}
+
 .timeline-wrap {
 	display: flex;
 	justify-content: space-between;
 	position: relative;
+}
+
+.company-timeline .timeline-wrap {
+	flex-wrap: wrap;	
 }
 
 .timeline-box {
@@ -138,6 +146,10 @@ h2 {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+}
+
+.company-timeline .timeline-box {
+	margin-bottom: 20px;
 }
 
 .timeline-box h2 {
@@ -298,19 +310,23 @@ p.form-message {
 	margin: auto;
 }
 
+.quicksearch {
+	display: none;
+}
+
 @media (min-width: 992px){
 	.timeline-display-wrapper {
-		margin-bottom:100px;
-		padding:100px 0;
+		margin-bottom: 100px;
+		padding: 100px 0;
 	}
 	.timeline-box { 
-		padding:25px;
+		padding: 25px;
 	}
 }
 
 @media (max-width: 991px){
 	.timeline-box {
-		width: 200px;
+		width: 210px;
 	}
 	.timeline-box h3 {
 		font-size: 41px !important;
@@ -367,7 +383,7 @@ p.form-message {
 }
 
 @media (max-width: 670px){
-	.timeline-line:before {
+	.timeline-line:before, .company-timeline .timeline-line:before {
 		top: 40px;
 		left: 50%;
 		border-top: none;
@@ -376,6 +392,12 @@ p.form-message {
 		height: 400px;
 		transform: translateX(-50%);
 	}
+	
+	.company-timeline .timeline-line:before {
+		display: block;
+		height: 900px;
+	}
+	
 	.timeline-wrap {
 		-webkit-flex-direction: column;
 		-moz-flex-direction: column;
