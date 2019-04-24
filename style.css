@@ -51,6 +51,33 @@ h2 {
 	text-align: center;
 }*/
 
+/*Button Styles*/
+.controls {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.controls button {
+	border: 3px solid #bc581a;
+    border-radius: 0;
+    cursor: pointer;
+    display: inline-block;
+    font: 500 16px/1 "gentona","Helvetica Neue",Helvetica,Arial,sans-serif;
+    letter-spacing: 1px;
+    padding: 15px 20px;
+    text-transform: uppercase;
+    white-space: normal;
+    background-color: inherit;
+    margin: 5px;
+}
+
+.controls button:hover {
+    background: #f37021;
+    color: #fff;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
 /*Styles for Homepage secondary breaker*/
 .breaker {
 	background-color: #00529b;
