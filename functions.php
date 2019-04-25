@@ -15,6 +15,8 @@ function hwcoe_ufl_child_scripts() {
 		wp_get_theme('hwcoe-ufl')->get('Version')
 	);
 	
+	wp_enqueue_style( 'datatables',	get_stylesheet_directory_uri() . '/css/datatables.min.css');
+	
 	wp_enqueue_style( 'hwcoe-ufl-child-style',
 		get_stylesheet_directory_uri() . '/style.css',
 		array( $parent_style ),
@@ -22,6 +24,8 @@ function hwcoe_ufl_child_scripts() {
 	);
 
 	wp_enqueue_script('mixitup', get_stylesheet_directory_uri() . '/js/mixitup.min.js', array(), get_theme_version(), true);
+	
+	wp_enqueue_script('datatables', get_stylesheet_directory_uri() . '/js/datatables.min.js', array(), get_theme_version(), true);
 	
 	wp_enqueue_script('hwcoe-ufl-child-scripts', get_stylesheet_directory_uri() . '/scripts.js', array(), get_theme_version(), true);
 	
@@ -84,6 +88,16 @@ function create_post_type() {
       'labels' => array(
         'name' => __( 'Event Information' ),
         'singular_name' => __( 'Event Information' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+    )
+  );
+  register_post_type( 'cf-registrations',
+    array(
+      'labels' => array(
+        'name' => __( 'Student Registration Entries' ),
+        'singular_name' => __( 'Student Entry' )
       ),
       'public' => true,
       'has_archive' => true,
