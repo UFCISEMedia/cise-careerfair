@@ -35,40 +35,46 @@ get_header(); ?>
 
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-			<div class="entry-content">
-				<?php the_content(); ?>
-				<div class="container">
-					<table id="stud-reg-table">					
-					<?php
-						$args = array( 'post_type' => 'cf-registrations', 'posts_per_page' => 100 );
-						$loop = new WP_Query( $args );
-					?>
-						<tr>
-							<th>Name</th>
-							<th>Email</th>
-							<th>Status</th>
-							<th>Department</th>
-							<th>Visa</th>
-							<th>Resume</th>
-						</tr>
+			<div class="entry-content stud-reg-content">			
+					<?php the_content(); ?>				
+				<?php if (! post_password_required($post)) { ?>
+					<div class="container">
+						<table id="stud-reg-table">					
 						<?php
-							while ( $loop->have_posts() ) : $loop->the_post();
-								echo '<tr>';
-								echo '<td>' .get_field( 'student_name' ). '</td>';
-								echo '<td>' .get_field( 'student_email' ). '</td>';
-								echo '<td>' .get_field( 'student_status' ). '</td>';
-								echo '<td>' .get_field( 'student_department' ). '</td>';
-								echo '<td>' .get_field( 'student_visa_sponsorship' ). '</td>';
-								if(get_field( 'student_resume' )):  //if the field is not empty
-									echo '<td><a href="' .get_field( 'student_resume' ). '" download>Resume: ' .get_field( 'student_name' ). '</a></td>'; //display it
-								else: ?>
-									<td>n/a</td>
-								<?php endif; 
-								echo '</tr>';
-							endwhile;
+							$args = array( 'post_type' => 'cf-registrations', 'posts_per_page' => 100 );
+							$loop = new WP_Query( $args );
 						?>
-					</table>
-				</div>
+							<thead>
+								<tr>
+									<th>Name</th>
+									<th>Email</th>
+									<th>Status</th>
+									<th>Department</th>
+									<th>Visa</th>
+									<th>Resume</th>
+								</tr>
+							</thead>
+							<tbody>
+							<?php
+								while ( $loop->have_posts() ) : $loop->the_post();
+									echo '<tr>';
+									echo '<td>' .get_field( 'student_name' ). '</td>';
+									echo '<td>' .get_field( 'student_email' ). '</td>';
+									echo '<td>' .get_field( 'student_status' ). '</td>';
+									echo '<td>' .get_field( 'student_department' ). '</td>';
+									echo '<td>' .get_field( 'student_visa_sponsorship' ). '</td>';
+									if(get_field( 'student_resume' )):  //if the field is not empty
+										echo '<td><a href="' .get_field( 'student_resume' ). '" download>Resume: ' .get_field( 'student_name' ). '</a></td>'; //display it
+									else: ?>
+										<td>n/a</td>
+									<?php endif; 
+									echo '</tr>';
+								endwhile;
+							?>
+							</tbody>
+						</table>
+					</div>
+				<?php } ?> <!--end password protection-->
 			</div>
 		</article>
     <?php endwhile; // End of the loop. ?>

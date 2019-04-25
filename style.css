@@ -21,6 +21,9 @@ h2 {
 	height: 250px;
 }
 
+.stud-reg-content .post-password-form {
+	text-align: center;
+}
 /*Header Styles*/
 .header.unit {
 	border-bottom: 1px solid #ccc;
