@@ -17,6 +17,10 @@ h2 {
 	line-height: 40px;
 }
 
+.landing-page-hero-full .hero-img {
+	height: 250px;
+}
+
 /*Header Styles*/
 .header.unit {
 	border-bottom: 1px solid #ccc;
@@ -46,10 +50,14 @@ h2 {
 	text-decoration: underline;
 }
 
-/*Styles for Homepage content with image
-.content-with-image h2{
-	text-align: center;
-}*/
+/*Styles for Homepage content with image*/
+.content-img-wrap {
+	margin-bottom: 40px;
+}
+
+.content-with-image p:last-child {
+	margin: 0;
+}
 
 /*Button Styles*/
 .controls {
