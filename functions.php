@@ -15,17 +15,22 @@ function hwcoe_ufl_child_scripts() {
 		wp_get_theme('hwcoe-ufl')->get('Version')
 	);
 	
-	wp_enqueue_style( 'datatables',	get_stylesheet_directory_uri() . '/css/datatables.min.css');
-	
+	wp_register_style( 'datatables', 'https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css' );
+	wp_enqueue_style('datatables');
+
 	wp_enqueue_style( 'hwcoe-ufl-child-style',
 		get_stylesheet_directory_uri() . '/style.css',
 		array( $parent_style ),
 		get_theme_version() 
 	);
-
-	wp_enqueue_script('mixitup', get_stylesheet_directory_uri() . '/js/mixitup.min.js', array(), get_theme_version(), true);
 	
-	wp_enqueue_script('datatables', get_stylesheet_directory_uri() . '/js/datatables.min.js', array(), get_theme_version(), true);
+	if(is_page('home')) {
+		wp_enqueue_script('mixitup', get_stylesheet_directory_uri() . '/js/mixitup.min.js', array(), get_theme_version(), true);
+	}
+
+	if(is_page('registered-students')) {
+		wp_enqueue_script( 'datatables', 'https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js', null, null, true );
+	}
 	
 	wp_enqueue_script('hwcoe-ufl-child-scripts', get_stylesheet_directory_uri() . '/scripts.js', array(), get_theme_version(), true);
 	
@@ -86,23 +91,28 @@ function create_post_type() {
   register_post_type( 'cf-event_information',
     array(
       'labels' => array(
-        'name' => __( 'Event Information' ),
-        'singular_name' => __( 'Event Information' )
-      ),
+        'name' => __( 'Details' ), //Top of page when in post type
+        'singular_name' => __( 'Event Information' ), //per post
+		'menu_name' => __('Event Information'), //Shows up on side menu
+		'all_items' => __('Event Details'), //On side menu as name of all items
+	  ),
       'public' => true,
+	  'menu_position' => 4,
       'has_archive' => true,
     )
   );
   register_post_type( 'cf-registrations',
     array(
       'labels' => array(
-        'name' => __( 'Student Registration Entries' ),
-        'singular_name' => __( 'Student Entry' )
+        'name' => __( 'Entries' ), //Top of page when in post type
+        'singular_name' => __( 'Entry' ), //per post
+		'menu_name' => __('Registration Entries'), //Shows up on side menu
+		'all_items' => __('All Entries'), //On side menu as name of all items
       ),
       'public' => true,
+	  'menu_position' => 5,
       'has_archive' => true,
     )
   );
 }
 add_action( 'init', 'create_post_type' );
-

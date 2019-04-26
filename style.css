@@ -62,7 +62,7 @@ h2 {
 	margin: 0;
 }
 
-/*Button Styles*/
+/*Filter Button Styles*/
 .controls {
 	text-align: center;
 	margin-bottom: 30px;
@@ -87,6 +87,11 @@ h2 {
     color: #fff;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
+}
+
+.mixitup-control-active {
+    background: #f37021 !important;
+    color: #fff;	
 }
 
 /*Styles for Homepage secondary breaker*/
