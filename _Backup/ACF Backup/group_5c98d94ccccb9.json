@@ -60,12 +60,12 @@
                     "id": ""
                 },
                 "choices": {
-                    "undergraduate": "Undergraduate",
+                    "undergraduate": "Undergrad<span class=\"half-word\">uate<\/span>",
                     "graduate": "Graduate",
                     "alumni": "Alumni",
                     "internship": "Internship",
-                    "full": "Full-Time",
-                    "visa": "Visa Sponsorship"
+                    "full-time": "Full-Time",
+                    "visa sponsorship": "Visa Sponsorship"
                 },
                 "allow_custom": 0,
                 "default_value": [],

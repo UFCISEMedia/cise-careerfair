@@ -1,16 +1,18 @@
-<div class="container">
+<div class="container content-wrap">
 	<div class="row">
-		<div class="col-sm-12 double-content">
+		<div class="col-sm-12">
 			<h2><?php the_sub_field( 'headline' ); ?></h2>			
-			<div class="row">
-				<div class="col-sm-5 col-sm-offset-1">
-					<div><?php the_sub_field( 'left_content' ); ?></div>
-				</div>
-				<div class="col-sm-5">
-					<div><?php the_sub_field( 'right_content' ); ?></div>
-				</div>
+			<div class="controls">
+				<?php while( have_rows( 'buttons' ) ) : the_row(); ?>
+					<?php 
+						$button_text = strtolower( get_sub_field( 'button_text' ) );
+						$button_value = str_replace (' ', '', $button_text);
+					?>
+					<button type="button" data-filter=".<?php echo $button_value; ?>"><?php the_sub_field( 'button_text' ); ?></button>
+				<?php endwhile // have_rows ?>
+				<button type="button" data-filter="all">All</button>
 			</div>
-			<hr>
+			<?php echo do_shortcode('[CUSTOM_POST_POPUP type="post" posts_per_page="50" order="ASC" orderby="title" category_name="current"]'); ?>
 		</div>
 	</div>
 </div>
