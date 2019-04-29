@@ -16,6 +16,55 @@
 			<?php while ( have_rows('landing_page_modules') ) : the_row(); ?>
 				<?php
 				  /*
+				   * General Content- Image
+				   * Left or Right justified image
+				   */
+				  ?>
+				<?php if( get_row_layout() == 'general_content_with_image' ): ?>
+					<?php include( HWCOE_UFL_CHILD_INC_DIR . '/ufl-content-image.php' ); ?>
+				<?php endif // general_content_with_image ?>
+				<?php
+				  /*
+				   * Double Content
+				   */
+				  ?>
+				<?php if( get_row_layout() == 'double_content' ): ?>
+					<?php include( HWCOE_UFL_CHILD_INC_DIR . '/ufl-double-content.php' ); ?>
+				<?php endif // double_content ?>
+				<?php
+				  /*
+				   * Short Timeline Display
+				   */
+				  ?>
+				<?php if( get_row_layout() == 'short_timeline_display' ): ?>
+					<?php include( HWCOE_UFL_CHILD_INC_DIR . '/ufl-cf-timeline.php' ); ?>
+				<?php endif // short_timeline_display ?>
+				<?php
+				  /*
+				   * Double Blocks
+				   */
+				  ?>
+				<?php if( get_row_layout() == 'double_blocks' ): ?>
+					<?php include( HWCOE_UFL_CHILD_INC_DIR . '/ufl-cf-double-blocks.php' ); ?>
+				<?php endif // double_blocks ?>
+				<?php
+				  /*
+				   * Tile Tabs Content
+				   */
+				  ?>
+				<?php if( get_row_layout() == 'tile_tabs_content' ): ?>
+					<?php include( HWCOE_UFL_CHILD_INC_DIR . '/ufl-tile-content.php' ); ?>
+				<?php endif // tile_tabs_content ?>
+				<?php
+				  /*
+				   * Company Display with Sort
+				   */
+				  ?>
+				<?php if( get_row_layout() == 'company_display_with_sort' ): ?>
+					<?php include( HWCOE_UFL_CHILD_INC_DIR . '/ufl-cf-company-display.php' ); ?>
+				<?php endif // company_display_with_sort ?>
+				<?php
+				  /*
 				   * Secondary Module
 				   * Modular- can be used multiple times
 				   */
@@ -61,30 +110,6 @@
 				<?php endif // triple_image_callout ?>
 				<?php
 				  /*
-				   * Short Timeline Display
-				   */
-				  ?>
-				<?php if( get_row_layout() == 'short_timeline_display' ): ?>
-					<?php include( HWCOE_UFL_CHILD_INC_DIR . '/ufl-cf-timeline.php' ); ?>
-				<?php endif // short_timeline_display ?>
-				<?php
-				  /*
-				   * Double Blocks
-				   */
-				  ?>
-				<?php if( get_row_layout() == 'double_blocks' ): ?>
-					<?php include( HWCOE_UFL_CHILD_INC_DIR . '/ufl-cf-double-blocks.php' ); ?>
-				<?php endif // double-blocks ?>
-				<?php
-				  /*
-				   * Tile Tabs Content
-				   */
-				  ?>
-				<?php if( get_row_layout() == 'tile_tabs_content' ): ?>
-					<?php include( HWCOE_UFL_CHILD_INC_DIR . '/ufl-tile-content.php' ); ?>
-				<?php endif // tile_tabs_content ?>
-				<?php
-				  /*
 				   * Content Block with Quote 
 				   */
 				  ?>
@@ -99,23 +124,6 @@
 				<?php if( get_row_layout() == 'general_content' ): ?>
 					<?php include( HWCOE_UFL_INC_DIR . '/ufl-content.php' ); ?>
 				<?php endif // general_content ?>
-				<?php
-				  /*
-				   * General Content- Image
-				   * Left or Right justified image
-				   */
-				  ?>
-				<?php if( get_row_layout() == 'general_content_with_image' ): ?>
-					<?php include( HWCOE_UFL_CHILD_INC_DIR . '/ufl-content-image.php' ); ?>
-				<?php endif // general_content_with_image ?>
-				<?php
-				  /*
-				   * Double Content
-				   */
-				  ?>
-				<?php if( get_row_layout() == 'double_content' ): ?>
-					<?php include( HWCOE_UFL_CHILD_INC_DIR . '/ufl-double-content.php' ); ?>
-				<?php endif // double_content ?>		
 				<?php
 				  /*
 				   * List Sub-Pages
