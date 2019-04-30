@@ -41,6 +41,8 @@ function reg_table_shortcode() {
 					endif; 
 			$output .= '</tr>';
 	endwhile;
+	wp_reset_query();
+	
 	$output .= '</tbody>
 				</table>';
 	

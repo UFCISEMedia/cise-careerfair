@@ -15,8 +15,9 @@ function hwcoe_ufl_child_scripts() {
 		wp_get_theme('hwcoe-ufl')->get('Version')
 	);
 	
-	wp_register_style( 'datatables', 'https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css' );
-	wp_enqueue_style('datatables');
+	//DataTables Styles
+	wp_enqueue_style( 'datatables', get_stylesheet_directory_uri() . '/css/datatables.min.css' );
+	//wp_enqueue_style( 'responsive.dataTables', get_stylesheet_directory_uri() . '/css/responsive.dataTables.min.css' );
 
 	wp_enqueue_style( 'hwcoe-ufl-child-style',
 		get_stylesheet_directory_uri() . '/style.css',
@@ -28,12 +29,14 @@ function hwcoe_ufl_child_scripts() {
 		wp_enqueue_script('mixitup', get_stylesheet_directory_uri() . '/js/mixitup.min.js', array(), get_theme_version(), true);
 	}
 
-	if(is_page('registered-students')) {
-		wp_enqueue_script( 'datatables', 'https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js', null, null, true );
-	}
+	//if(is_page('registered-students')) {
+	//}
 	
 	wp_enqueue_script('hwcoe-ufl-child-scripts', get_stylesheet_directory_uri() . '/scripts.js', array(), get_theme_version(), true);
 	
+	wp_enqueue_script( 'datatables', get_stylesheet_directory_uri() . '/js/datatables.min.js', null, null, true );
+	//wp_enqueue_script( 'dataTables.responsive', get_stylesheet_directory_uri() . '/js/dataTables.responsive.min.js', null, null, true );
+
 	
 }
 add_action( 'wp_enqueue_scripts', 'hwcoe_ufl_child_scripts' );

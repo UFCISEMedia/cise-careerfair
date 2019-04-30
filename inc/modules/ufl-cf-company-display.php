@@ -1,6 +1,6 @@
 <div class="container content-wrap">
 	<div class="row">
-		<div class="col-sm-12">
+		<div class="col-sm-12 codisplay">
 			<h2><?php the_sub_field( 'headline' ); ?></h2>			
 			<div class="controls">
 				<?php while( have_rows( 'buttons' ) ) : the_row(); ?>

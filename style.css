@@ -309,6 +309,28 @@ h2 {
 	font-weight: 400 !important;
 }
 
+.dataTables_wrapper .dataTables_filter {
+	margin-bottom: 5px;
+}
+
+div#reg-table_info {
+	float: left !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.previous, .dataTables_wrapper .dataTables_paginate .paginate_button.next {
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 16px;
+	color: #bc581a !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.previous:hover, .dataTables_wrapper .dataTables_paginate .paginate_button.next:hover {
+	color: #e47e3e !important;
+	text-decoration: underline !important;
+	border: none !important;
+	background: none;
+}
+
 /* Double Block Styles*/
 .double-block-wrap {
 	display: flex;
@@ -379,6 +401,20 @@ p.form-message {
 @media (max-width: 767px){
 	.bwg_container { 
 		margin-bottom: 50px !important;
+	}
+	
+	table#reg-table {
+		font-size: 16px !important;
+	}
+	
+	.table-wrapper {
+		overflow-x: scroll;
+		white-space: nowrap;
+		width: 100%;
+	}
+	
+	div#reg-table_info {
+		float: none !important;
 	}
 }
 

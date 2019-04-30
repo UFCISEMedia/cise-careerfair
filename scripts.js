@@ -3,12 +3,19 @@
  */
 
 jQuery(function($) {
-	//MIXITUP FILTERING
-	// Instantiate MixItUp:
-	var mixer = mixitup('.speaker-tab');
+	
+	if( $('div.codisplay').length ) {
+		//MIXITUP FILTERING
+		// Instantiate MixItUp:
+		var mixer = mixitup('.speaker-tab');
+	}
 
 	
 	//Data Tables
-	//$('#stud-reg-table').DataTable();
+	$('#reg-table').DataTable( {
+        "dom": 'lf<"table-wrapper"t>ip',
+		//responsive: true,
+		"pageLength": 100
+	});
 	
 });
