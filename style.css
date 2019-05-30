@@ -399,6 +399,10 @@ p.form-message {
 }
 
 @media (max-width: 767px){
+	.content-with-image {
+		margin-bottom: 20px;
+	}
+	
 	.bwg_container { 
 		margin-bottom: 50px !important;
 	}
