@@ -1,6 +1,6 @@
-# UF HWCOE 2018 Child
+# CISE Career Fair Theme
 
-Child theme for HWCOE UFL.
+This is based off if tge child theme for HWCOE UFL.
 
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
