@@ -14,10 +14,6 @@ function hwcoe_ufl_child_scripts() {
 		['bootstrap', 'prettyPhoto'],
 		wp_get_theme('hwcoe-ufl')->get('Version')
 	);
-	
-	//DataTables Styles
-	wp_enqueue_style( 'datatables', get_stylesheet_directory_uri() . '/css/datatables.min.css' );
-	//wp_enqueue_style( 'responsive.dataTables', get_stylesheet_directory_uri() . '/css/responsive.dataTables.min.css' );
 
 	wp_enqueue_style( 'hwcoe-ufl-child-style',
 		get_stylesheet_directory_uri() . '/style.css',
@@ -25,19 +21,10 @@ function hwcoe_ufl_child_scripts() {
 		get_theme_version() 
 	);
 	
-	if(is_page('home')) {
-		wp_enqueue_script('mixitup', get_stylesheet_directory_uri() . '/js/mixitup.min.js', array(), get_theme_version(), true);
-	}
-
-	//if(is_page('registered-students')) {
-	//}
+	wp_enqueue_script('mixitup', get_stylesheet_directory_uri() . '/js/mixitup.min.js', array(), get_theme_version(), true);
 	
 	wp_enqueue_script('hwcoe-ufl-child-scripts', get_stylesheet_directory_uri() . '/scripts.js', array(), get_theme_version(), true);
-	
-	wp_enqueue_script( 'datatables', get_stylesheet_directory_uri() . '/js/datatables.min.js', null, null, true );
-	//wp_enqueue_script( 'dataTables.responsive', get_stylesheet_directory_uri() . '/js/dataTables.responsive.min.js', null, null, true );
-
-	
+		
 }
 add_action( 'wp_enqueue_scripts', 'hwcoe_ufl_child_scripts' );
 
@@ -56,7 +43,7 @@ if ( !function_exists( 'hwcoe_ufl_child_icon_url' ) ) {
 /*
  * Theme variable definitions
  */
-define( "HWCOE_UFL_CHILD_INC_DIR", get_stylesheet_directory() . "/inc/modules" );
+define( "HWCOE_UFL_CAREER_INC_DIR", get_stylesheet_directory() . "/inc/modules" );
 
 /*
 * Visual Editor Styles
@@ -101,19 +88,6 @@ function create_post_type() {
 	  ),
       'public' => true,
 	  'menu_position' => 4,
-      'has_archive' => true,
-    )
-  );
-  register_post_type( 'cf-registrations',
-    array(
-      'labels' => array(
-        'name' => __( 'Entries' ), //Top of page when in post type
-        'singular_name' => __( 'Entry' ), //per post
-		'menu_name' => __('Registration Entries'), //Shows up on side menu
-		'all_items' => __('All Entries'), //On side menu as name of all items
-      ),
-      'public' => true,
-	  'menu_position' => 5,
       'has_archive' => true,
     )
   );

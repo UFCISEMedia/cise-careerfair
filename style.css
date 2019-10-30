@@ -24,6 +24,11 @@ h2 {
 .stud-reg-content .post-password-form {
 	text-align: center;
 }
+
+ul li, ol li {
+	text-transform: none;
+}
+
 /*Header Styles*/
 .header.unit {
 	border-bottom: 1px solid #ccc;
@@ -165,7 +170,7 @@ h2 {
 	transform: translateY(-50%);
 }
 
-.company-timeline .timeline-line:before {
+.long-timeline .timeline-line:before {
 	display: none;
 }
 
@@ -175,7 +180,7 @@ h2 {
 	position: relative;
 }
 
-.company-timeline .timeline-wrap {
+.long-timeline .timeline-wrap {
 	flex-wrap: wrap;	
 }
 
@@ -191,8 +196,8 @@ h2 {
 	justify-content: center;
 }
 
-.company-timeline .timeline-box {
-	margin-bottom: 20px;
+.long-timeline .timeline-box {
+	margin-bottom: 30px;
 }
 
 .timeline-box h2 {
@@ -466,7 +471,7 @@ p.form-message {
 }
 
 @media (max-width: 670px){
-	.timeline-line:before, .company-timeline .timeline-line:before {
+	.timeline-line:before {
 		top: 40px;
 		left: 50%;
 		border-top: none;
@@ -474,11 +479,6 @@ p.form-message {
 		width: 10px;
 		height: 400px;
 		transform: translateX(-50%);
-	}
-	
-	.company-timeline .timeline-line:before {
-		display: block;
-		height: 900px;
 	}
 	
 	.timeline-wrap {
