@@ -21,7 +21,7 @@
 				   */
 				  ?>
 				<?php if( get_row_layout() == 'general_content_with_image' ): ?>
-					<?php include( HWCOE_UFL_CHILD_INC_DIR . '/ufl-content-image.php' ); ?>
+					<?php include( HWCOE_UFL_CAREER_INC_DIR . '/ufl-content-image.php' ); ?>
 				<?php endif // general_content_with_image ?>
 				<?php
 				  /*
@@ -29,7 +29,7 @@
 				   */
 				  ?>
 				<?php if( get_row_layout() == 'double_content' ): ?>
-					<?php include( HWCOE_UFL_CHILD_INC_DIR . '/ufl-double-content.php' ); ?>
+					<?php include( HWCOE_UFL_CAREER_INC_DIR . '/ufl-double-content.php' ); ?>
 				<?php endif // double_content ?>
 				<?php
 				  /*
@@ -37,15 +37,23 @@
 				   */
 				  ?>
 				<?php if( get_row_layout() == 'short_timeline_display' ): ?>
-					<?php include( HWCOE_UFL_CHILD_INC_DIR . '/ufl-cf-timeline.php' ); ?>
+					<?php include( HWCOE_UFL_CAREER_INC_DIR . '/ufl-cf-timeline.php' ); ?>
 				<?php endif // short_timeline_display ?>
+				<?php
+				  /*
+				   * Long Timeline Display
+				   */
+				  ?>
+				<?php if( get_row_layout() == 'long_timeline_display' ): ?>
+					<?php include( HWCOE_UFL_CAREER_INC_DIR . '/ufl-cf-long-timeline.php' ); ?>
+				<?php endif // long_timeline_display ?>
 				<?php
 				  /*
 				   * Double Blocks
 				   */
 				  ?>
 				<?php if( get_row_layout() == 'double_blocks' ): ?>
-					<?php include( HWCOE_UFL_CHILD_INC_DIR . '/ufl-cf-double-blocks.php' ); ?>
+					<?php include( HWCOE_UFL_CAREER_INC_DIR . '/ufl-cf-double-blocks.php' ); ?>
 				<?php endif // double_blocks ?>
 				<?php
 				  /*
@@ -53,7 +61,7 @@
 				   */
 				  ?>
 				<?php if( get_row_layout() == 'tile_tabs_content' ): ?>
-					<?php include( HWCOE_UFL_CHILD_INC_DIR . '/ufl-tile-content.php' ); ?>
+					<?php include( HWCOE_UFL_CAREER_INC_DIR . '/ufl-tile-content.php' ); ?>
 				<?php endif // tile_tabs_content ?>
 				<?php
 				  /*
@@ -61,7 +69,7 @@
 				   */
 				  ?>
 				<?php if( get_row_layout() == 'company_display_with_sort' ): ?>
-					<?php include( HWCOE_UFL_CHILD_INC_DIR . '/ufl-cf-company-display.php' ); ?>
+					<?php include( HWCOE_UFL_CAREER_INC_DIR . '/ufl-cf-company-display.php' ); ?>
 				<?php endif // company_display_with_sort ?>
 				<?php
 				  /*
