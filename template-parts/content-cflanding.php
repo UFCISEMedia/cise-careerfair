@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying page content in landing-page.php.
+ * Template part for displaying page content in career-fair-landing-page.php.
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -12,8 +12,8 @@
 	
 	<div class="entry-content">
 		<?php the_content(); ?>
-		<?php if( have_rows('landing_page_modules') ): ?>
-			<?php while ( have_rows('landing_page_modules') ) : the_row(); ?>
+		<?php if( have_rows('cf_landing_page_modules') ): ?>
+			<?php while ( have_rows('cf_landing_page_modules') ) : the_row(); ?>
 				<?php
 				  /*
 				   * General Content- Image
