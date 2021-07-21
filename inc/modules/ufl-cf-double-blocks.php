@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container content-wrap">
 	<div class="double-block-wrap">
 	<?php if( have_rows( 'cf_blocks' ) ): ?>
 		<?php while( have_rows( 'cf_blocks' ) ): the_row(); ?>
